@@ -1,0 +1,25 @@
+{
+  "name": "srcds-log-receiver",
+  "version": "1.0.0",
+  "description": "A simple too to receive srcds logs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenSourceLAN/srcds-log-receiver.git"
+  },
+  "keywords": [
+    "srcds",
+    "logs",
+    "counter",
+    "strike",
+    "tf2"
+  ],
+  "author": "Chris Holman",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "moment": "^2.13.0"
+  }
+}
