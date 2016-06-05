@@ -20,6 +20,13 @@ log on
 ```
 And hey presto, you're receiving logs in the `./logs` directory!
 
+If you are running Warmod, you can send warmod logs here as well - 
+
+```
+wm_stats_method 2 // To make sure logs are sent to both this app via UDP and stored locally 
+wm_stats_trace 1 // If you want to record player locations in the logs too, set this
+```
+
 For example:
 
 ```
