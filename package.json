@@ -2,7 +2,7 @@
   "name": "srcds-log-receiver",
   "version": "1.0.0",
   "description": "A simple too to receive srcds logs",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,5 +23,10 @@
     "moment": "^2.13.0"
   },
   "devDependencies": {
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/OpenSourceLAN/srcds-log-receiver/issues"
+  },
+  "homepage": "https://github.com/OpenSourceLAN/srcds-log-receiver#readme",
+  "typings": "./index.d.ts"
 }
