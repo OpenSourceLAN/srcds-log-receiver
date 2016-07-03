@@ -23,6 +23,5 @@
     "moment": "^2.13.0"
   },
   "devDependencies": {
-    "typings": "^1.3.1"
   }
 }

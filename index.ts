@@ -10,7 +10,7 @@ export type LogMessage = parser.LogMessage;
  * Emits "invalid" event when log message is bad for some reason
  */ 
 
-export class LogListener extends events.EventEmitter {
+export class LogReceiver extends events.EventEmitter {
 	opts: ILogListenerOptions;
 	socket: dgram.Socket;
 
@@ -52,6 +52,7 @@ export interface ILogListenerOptions {
 	port?: number;
 	address?: string;
 	requirePassword?: boolean;
+	defaultPassword?: string;
 	definedSources?: ILogSourceDetails[];
 }
 
