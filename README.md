@@ -1,14 +1,47 @@
 ### Srcds Log Receiver
 
-A simple little app that will save the log files for any server that are 
-sent to it. 
+A library to receive logs directly from a Source dedicated server (srcds) via 
+its UDP log transport (`logaddress_add`). As these logs are sent live during
+the game, this allows you to build interactive real time systems that react
+to in-game events. 
 
-# Usage:
+Also included is a simple app that saves all received logs to disk. This means
+that no matter what happens to your game server, the logs will always be saved.
+See further below for usage information.
 
-Start the app:
+# Library usage
+
+`npm install --save srcds-log-receiver`
+
+Javascript example, but Typecript is also supported:
 ```
-npm install
-node app.js
+var logReceiver = require("srcds-log-receiver");
+var options = {
+	port: 9871  // this is the default
+};
+
+var receiver = new logReceiver.LogListener();
+receiver.on("data", function(data) {
+	if (data.isValid) {
+		console.log("Received at " + data.receivedAt.format() + " a log of type " + data.packetType);
+	}
+});
+```
+
+# Save to disk app usage:
+
+For the log saver app, build with:
+
+```
+npm install 
+node ./node_modules/typings/dist/bin.js install
+tsc
+```
+
+And run with:
+
+```
+node saveToDisk.js
 ```
 
 On your  SRCDS server:

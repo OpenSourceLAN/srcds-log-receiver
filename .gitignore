@@ -2,6 +2,10 @@
 logs
 *.log
 npm-debug.log*
+typings/
+*.js
+*.js.map
+*.d.ts
 
 # Runtime data
 pids
