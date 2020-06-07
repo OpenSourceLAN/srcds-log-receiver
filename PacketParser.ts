@@ -87,7 +87,7 @@ export class LogMessageConstructor {
 						logMessage.invalidReason = InvalidReason.WrongPassword;
 						return false;
 					}
-				} else if (logMessage.password == this.opts.defaultPassword) {
+				} else if (this.opts.defaultPassword == providedPass.toString()) {
 					logMessage.password = providedPass.toString();
 					return true;
 				} else {
