@@ -1,10 +1,11 @@
 {
   "name": "srcds-log-receiver",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simple too to receive srcds logs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "tsc"
   },
   "repository": {
     "type": "git",
